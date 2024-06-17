@@ -56,7 +56,7 @@ export default async function handler(
       textColor: currentStatusColorText,
     };
 
-    const response = await fetch("https://teste-motoca-systems-front-end-levi.vercel.app/bikes");
+    const response = await fetch("http://localhost:3001/bikes");
     const data: Array<Data> = await response.json();
 
     const alreadyExist = data.find(bike => bike.code === formatedData.code);

@@ -6,7 +6,7 @@ export default async function handler(
 ) {
 try {
     const {code, id} = req.body
-    const response = await fetch(`https://teste-motoca-systems-front-end-levi.vercel.app/bikes/${id}`, {
+    const response = await fetch(`http://localhost:3001/bikes/${id}`, {
       method: "DELETE"
     })
 

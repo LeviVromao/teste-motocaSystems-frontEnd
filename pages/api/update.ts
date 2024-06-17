@@ -65,7 +65,7 @@ try {
     }
 
     const updatedBike = {...bikeToUpdate, ...updatedData}
-    const updateResponse = await fetch(`https://teste-motoca-systems-front-end-levi.vercel.app/bikes/${bikeToUpdate.id}`, {
+    const updateResponse = await fetch(`http://localhost:3001/bikes/${bikeToUpdate.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
