@@ -31,7 +31,7 @@ export default async function handler(
 try {
     const {code, color, value, status, model } = req.body as Data;
 
-    const response = await fetch("https://teste-motoca-systems-front-end-levi.vercel.app/bikes");
+    const response = await fetch("http://localhost:3001/bikes");
     const data: Array<Data>= await response.json();
     let currentStatusColorBackground;
     let currentStatusColorText;
