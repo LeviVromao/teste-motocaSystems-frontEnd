@@ -31,7 +31,7 @@ export default async function handler(
 try {
     const {code, color, value, status, model } = req.body as Data;
 
-    const response = await fetch("http://localhost:3001/bikes");
+    const response = await fetch("https://teste-motoca-systems-front-end-levi.vercel.app/bikes");
     const data: Array<Data>= await response.json();
     let currentStatusColorBackground;
     let currentStatusColorText;
@@ -65,7 +65,7 @@ try {
     }
 
     const updatedBike = {...bikeToUpdate, ...updatedData}
-    const updateResponse = await fetch(`http://localhost:3001/bikes/${bikeToUpdate.id}`, {
+    const updateResponse = await fetch(`https://teste-motoca-systems-front-end-levi.vercel.app/bikes/${bikeToUpdate.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
